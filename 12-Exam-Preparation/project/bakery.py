@@ -1,9 +1,9 @@
-from baked_food.cake import Cake
-from baked_food.bread import Bread
-from drink.tea import Tea
-from drink.water import Water
-from table.inside_table import InsideTable
-from table.outside_table import OutsideTable
+from project.baked_food.cake import Cake
+from project.baked_food.bread import Bread
+from project.drink.tea import Tea
+from project.drink.water import Water
+from project.table.inside_table import InsideTable
+from project.table.outside_table import OutsideTable
 
 class Bakery():
     def __init__(self, name: str):
@@ -63,3 +63,10 @@ class Bakery():
              return f"Table {table.table_number} has been reserved for {number_of_people} people"
         else:
              return f"No available table for {number_of_people} people"
+
+
+    def order_food (self, table_number: int, food_name1: str, food_name2: str):
+        table = next((table for table in self.tables_repository if table.table_number == table_number), None)
+        
+    def get_total_income(self):
+        return f"Total income: {self.total_income:.2f}lv" 

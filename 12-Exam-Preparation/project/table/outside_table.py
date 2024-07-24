@@ -1,4 +1,4 @@
-from table.table import Table
+from project.table.table import Table
 
 class OutsideTable(Table):
     def __init__(self, table_number: int, capacity: int):

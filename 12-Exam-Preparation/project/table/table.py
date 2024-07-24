@@ -1,6 +1,6 @@
 from abc import ABC
-from baked_food.baked_food import BakedFood
-from drink.drink import Drink
+from project.baked_food.baked_food import BakedFood
+from project.drink.drink import Drink
 
 
 class Table(ABC):
